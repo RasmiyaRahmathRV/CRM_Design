@@ -56,7 +56,7 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Property Type 1</td>
+                                        <td>Residential</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
                                                 data-target="#modal-propert-type">Edit</button>
@@ -65,7 +65,7 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Property Type 2</td>
+                                        <td>Commercial</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
                                                 data-target="#modal-propert-type">Edit</button>

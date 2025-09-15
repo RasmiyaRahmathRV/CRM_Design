@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-1 float-right mb-2">
-                                            <button type="button" class="btn btn-info searchbtnchq">Search</button>
+                                            <button type="button" class="btn btn-info">Search</button>
                                         </div>
                                     </div>
 
@@ -116,7 +116,7 @@
                             </div>
                             <!-- /.card -->
 
-                            <div class="card searchCheque">
+                            <div class="card">
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="example1" class="table table-striped projects ">

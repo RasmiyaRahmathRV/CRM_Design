@@ -23,12 +23,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Statement</h1>
+                    <h1>Company Wise Report</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">Home</a></li>
-                        <li class="breadcrumb-item active">Statement</li>
+                        <li class="breadcrumb-item active">Company Wise Report</li>
                     </ol>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                                 <!-- form start -->
                                 <form class="form-horizontal">
                                     <div class="form-group row m-4">
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <label for="exampleInputEmail1">From</label>
                                             <div class="input-group date" id="dateFrom" data-target-input="nearest">
                                                 <input type="text" class="form-control datetimepicker-input" data-target="#dateFrom" placeholder="dd-mm-YYYY" />
@@ -58,7 +58,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <label for="exampleInputEmail1">To</label>
                                             <div class="input-group date" id="dateTo" data-target-input="nearest">
                                                 <input type="text" class="form-control datetimepicker-input" data-target="#dateTo" placeholder="dd-mm-YYYY" />
@@ -67,49 +67,77 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-1">
-                                            <button type="button" class="btn btn-info searchbtnchq">Search</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-1 float-right mb-2">
+                                            <button type="button" class="btn btn-info">Search</button>
                                         </div>
                                     </div>
+
                                 </form>
                             </div>
                             <!-- /.card -->
 
-                            <div class="card searchCheque">
+                            <div class="card">
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    <table id="example1" class="table table-striped projects ">
+                                    <table id="example1" class="table table-bordered projects ">
                                         <thead>
                                             <tr>
-                                                <th>Due Date</th>
-                                                <th>Project</th>
-                                                <th>Vendor</th>
-                                                <th>Name</th>
-                                                <th>Bldg</th>
-                                                <th>Unit</th>
-                                                <th>Amount</th>
-                                                <th>Composition</th>
-                                                <th>Received</th>
-                                                <th>Pending</th>
+                                                <th>#</th>
+                                                <th>Company Name</th>
+                                                <th>Direct Flats</th>
+                                                <th>Flats under Faateh</th>
+                                                <th>Indirect Flats</th>
+                                                <th>Grand Total</th>
+                                                <th>%of grand Total</th>
+                                                <th>Full Building</th>
+                                                <th>1BHK</th>
+                                                <th>2BHK</th>
+                                                <th>3BHK</th>
+                                                <th>4BHK</th>
+                                                <th>5BHK</th>
+                                                <th>6BHK</th>
+                                                <th>Studio</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>01/08/2025</td>
-                                                <td>PRJ00001</td>
-                                                <td>Vendor 1</td>
-                                                <td>Building name</td>
-                                                <td>Unit 1</td>
-                                                <td>102</td>
-                                                <td>150000.00</td>
-                                                <td>RENT 1/4</td>
-                                                <td>100000.00</td>
-                                                <td>
-                                                    50000.00
-                                                </td>
+                                                <td>1</td>
+                                                <td>Fama Real estate</td>
+                                                <td>1315</td>
+                                                <td>1764</td>
+                                                <td>0</td>
+                                                <td>3079</td>
+                                                <td>58.45%</td>
+                                                <td>8</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
                                             </tr>
-
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Walls and Bricks Real Estate</td>
+                                                <td>1097</td>
+                                                <td>2</td>
+                                                <td>164</td>
+                                                <td> 1099</td>
+                                                <td> 20.86%</td>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
                                         </tbody>
+
                                     </table>
                                 </div>
                             </div>
@@ -154,10 +182,11 @@
 <script>
     $(function() {
         $("#example1").DataTable({
-            "responsive": true,
+            "responsive": false,
             "lengthChange": false,
             "autoWidth": false,
-            "buttons": ["excel", "print"]
+            "scrollX": true,
+            "buttons": ["excel", "print", "colvis"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         $('#example2').DataTable({
             "paging": true,
@@ -165,7 +194,7 @@
             "searching": false,
             "ordering": true,
             "info": true,
-            "autoWidth": false,
+            "autoWidth": true,
             "responsive": true,
         });
     });
@@ -175,16 +204,5 @@
 
     $('#dateTo').datetimepicker({
         format: 'DD-MM-YYYY'
-    });
-
-    $(document).ready(function() {
-        $('.searchCheque').hide();
-
-        $('.propertyselect').hide();
-        $('.unitselect').hide();
-    });
-
-    $('.searchbtnchq').click(function() {
-        $('.searchCheque').show();
     });
 </script>

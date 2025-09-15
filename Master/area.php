@@ -57,7 +57,7 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Area 1</td>
+                                        <td>Al Barsha</td>
                                         <td>Fama</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
@@ -67,7 +67,7 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Area 2</td>
+                                        <td>Al Satwa</td>
                                         <td>Fama</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
@@ -77,7 +77,7 @@
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>Area 3</td>
+                                        <td>Bur Dubai</td>
                                         <td>Fama</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
@@ -87,7 +87,7 @@
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td>Area 1</td>
+                                        <td>Business Bay</td>
                                         <td>Fama investments</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
@@ -98,7 +98,7 @@
 
                                     <tr>
                                         <td>5</td>
-                                        <td>Area</td>
+                                        <td>Deira</td>
                                         <td>W&B</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"

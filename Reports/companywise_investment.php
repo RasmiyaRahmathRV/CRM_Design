@@ -23,12 +23,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Project Acquisition</h1>
+                    <h1>Company Wise Investment</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">Home</a></li>
-                        <li class="breadcrumb-item active">Project Acquisition</li>
+                        <li class="breadcrumb-item active">Company Wise Investment</li>
                     </ol>
                 </div>
             </div>
@@ -67,115 +67,114 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Company</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Company</option>
-                                                <option value="1">Fama real estate</option>
-                                                <option value="1">Walls and Bricks</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Project</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Project</option>
-                                                <option value="1">PRJ00001</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row  m-4">
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Vendor</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Vendor</option>
-                                                <option value="1">Vendor 1</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Property</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Property</option>
-                                                <option value="1">Property 1</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Unit type</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Unit type</option>
-                                                <option value="1">Unit 1</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Project Status</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Status</option>
-                                                <option value="1">New</option>
-                                                <option value="1">Renewal</option>
-                                            </select>
-                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-1 float-right mb-2">
                                             <button type="button" class="btn btn-info">Search</button>
                                         </div>
                                     </div>
-
                                 </form>
                             </div>
                             <!-- /.card -->
 
-                            <div class="card searchCheque">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="btn btn-info float-right" href="../Reports/companywise_inv_detailed.php">Detailed report</a>
+                                </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    <table id="example1" class="table table-striped projects ">
+                                    <table id="example1" class="table table-bordered projects ">
                                         <thead>
                                             <tr>
-                                                <th>Project</th>
-                                                <th>Start</th>
-                                                <th>Expiry</th>
-                                                <th>Vendor</th>
-                                                <th>Bldg</th>
-                                                <th>Locality</th>
-                                                <th>Unit</th>
-                                                <th>Tenant Name</th>
-                                                <th>Commition</th>
-                                                <th>Deposit</th>
-                                                <th>OTC</th>
-                                                <th>Rent P.A</th>
-                                                <th>Total Project Cost</th>
-                                                <th>Total Revenue</th>
-                                                <th>Period Rent</th>
-                                                <th>Tenure</th>
-                                                <th>Agent</th>
-                                                <th>Mobile</th>
-                                                <th>Status</th>
-                                                <th>CreatedAt</th>
+                                                <th>#</th>
+                                                <th>Company Name</th>
+                                                <th>Investment Amount</th>
+                                                <th>Total Profit Amount to be paid</th>
+                                                <th> % Profit Released</th>
+                                                <!-- <th></th> -->
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>PRJ00001</td>
-                                                <td>01/08/2025</td>
-                                                <td>01/08/2026</td>
-                                                <td>Vendor 1</td>
-                                                <td>Building name</td>
-                                                <td>Unit 1</td>
-                                                <td>Tenant</td>
-                                                <td>5000.00</td>
-                                                <td>5000.00</td>
-                                                <td>50000.00</td>
-                                                <td>100000.00</td>
-                                                <td>01/08/2025</td>
-                                                <td>PRJ00001</td>
-                                                <td>Building name</td>
-                                                <td>Unit 1</td>
-                                                <td>102</td>
-                                                <td>150000.00</td>
-                                                <td>RENT 1/4</td>
-                                                <td>100000.00</td>
-                                                <td>50000.00</td>
+                                                <td>1</td>
+                                                <td>F&D</td>
+                                                <td>13,282,525</td>
+                                                <td>4,601,373</td>
+                                                <td>58.11%</td>
                                             </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>FAMA</td>
+                                                <td>13,976,500</td>
+                                                <td>9,336,346</td>
+                                                <td>64.33%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>W&B</td>
+                                                <td>9,839,151</td>
+                                                <td>4,023,091</td>
+                                                <td>52.44%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>FAMA INV</td>
+                                                <td>22,131,841</td>
+                                                <td>5,683,375</td>
+                                                <td>14.52%</td>
+                                            </tr>
+
+
                                         </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+
+                                    <h5>Fama Investment Disbursement</h5>
+
+                                </div>
+                                <div class="card-body">
+                                    <table id="example2" class="table table-bordered projects ">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Fama Investment Disbursement</th>
+                                                <th>Investment Amount</th>
+                                                <th>% Of Grand Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Walls and Bricks</td>
+                                                <td>16,190,432</td>
+                                                <td>73.15%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Floors and Doors</td>
+                                                <td>4,237,040</td>
+                                                <td>19.14%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Fama Real Estate</td>
+                                                <td>1,694,369</td>
+                                                <td>7.66%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Fama Investments</td>
+                                                <td>10,000</td>
+                                                <td>0.05%</td>
+                                            </tr>
+
+                                        </tbody>
+
                                     </table>
                                 </div>
                             </div>
@@ -222,10 +221,18 @@
         $("#example1").DataTable({
             "responsive": false,
             "lengthChange": false,
-            "autoWidth": true,
+            "autoWidth": false,
             "scrollX": true,
-            "buttons": ["excel", "print"]
+            "buttons": ["excel", "print", "colvis"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        $("#example2").DataTable({
+            "responsive": false,
+            "lengthChange": false,
+            "autoWidth": false,
+            "scrollX": true,
+            "buttons": ["excel", "print", "colvis"]
+        }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
 
     });
     $('#dateFrom').datetimepicker({
@@ -234,10 +241,5 @@
 
     $('#dateTo').datetimepicker({
         format: 'DD-MM-YYYY'
-    });
-
-    $(document).ready(function() {
-        $('.propertyselect').hide();
-        $('.unitselect').hide();
     });
 </script>

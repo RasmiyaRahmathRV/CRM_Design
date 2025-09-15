@@ -6,6 +6,8 @@
 <!-- Select2 -->
 <link rel="stylesheet" href="../assets/select2/css/select2.min.css">
 <link rel="stylesheet" href="../assets/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="../assets/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- DataTables -->
 <link rel="stylesheet" href="../assets/datatables-bs4/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="../assets/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -327,7 +329,6 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-
                                                 <div class="col-md-4">
                                                     <label for="exampleInputEmail1">Closing Date</label>
                                                     <div class="input-group date" id="closingdate" data-target-input="nearest">
@@ -337,89 +338,134 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
 
                                             <button class="btn btn-info" onclick="stepper.previous()">Previous</button>
                                             <button class="btn btn-info" onclick="stepper.next()">Next</button>
                                         </div>
                                         <div id="unit-step" class="content" role="tabpanel" aria-labelledby="unit-step-trigger">
-                                            <div id="append-div">
-                                                <div class="form-group row">
-                                                    <div class="col-sm-2">
-                                                        <label class="control-label">Unit No</label>
-                                                        <input type="text" name="unit_no[]" class="form-control" placeholder="Unit No">
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <label class="control-label">Unit Type</label>
-                                                        <select class="form-control select2" name="unit_type[]" id="unit_type0">
-                                                            <option value="">Unit Type</option>
-                                                            <option value="1">1BHK</option>
-                                                            <option value="2">2BHK</option>
-                                                            <option value="3">3BHK</option>
-                                                            <option value="part">Partition</option>
-                                                            <option value="bs">Bed Space</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-1">
-                                                        <label class="control-label">Floor No</label>
-                                                        <input type="text" name="floor_no[]" class="form-control" placeholder="Floor No">
+                                            <div class="form-group">
+                                                <div class="col-md-4 mt-4">
+                                                    <div class="icheck-success d-inline">
+                                                        <input type="checkbox" id="fullBuilding" class="fullBuildCheck" value="1">
+                                                        <label class="labelpermission" for="fullBuilding"> Full Building </label>
                                                     </div>
 
-                                                    <div class="col-sm-2">
-                                                        <label>Unit Status</label>
-                                                        <select class="form-control select2" name="unit_status[]" id="unit_status">
-                                                            <option value="">Unit Status</option>
-                                                            <option value="1">Furnished</option>
-                                                            <option value="1">Un furnished</option>
-                                                        </select>
+                                                    <div class="icheck-success d-inline">
+                                                        <input type="checkbox" id="btob" class="btobcheck" value="1">
+                                                        <label class="labelpermission" for="btob"> B2B </label>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="normalBuilding">
+                                                <div id="append-div">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label class="control-label">Unit No</label>
+                                                            <input type="text" name="unit_no[]" class="form-control" placeholder="Unit No">
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <label class="control-label">Unit Type</label>
+                                                            <select class="form-control select2" name="unit_type[]" id="unit_type0">
+                                                                <option value="">Unit Type</option>
+                                                                <option value="1">1BHK</option>
+                                                                <option value="2">2BHK</option>
+                                                                <option value="3">3BHK</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                            <label class="control-label">Floor No</label>
+                                                            <input type="text" name="floor_no[]" class="form-control" placeholder="Floor No">
+                                                        </div>
 
-                                                    <div class="col-sm-2">
-                                                        <label class="control-label">Unit Rent Per Annum</label>
-                                                        <input type="number" name="unit_rent_per_annum[]" class="form-control" placeholder="Unit Rent Per Annum">
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <label class="control-label">Unit Size</label>
-                                                        <div class="input-group input-group">
-                                                            <div class="input-group-prepend select2">
-                                                                <select name="" id="">
-                                                                    <option value="">Sq.ft</option>
-                                                                    <option value="">Sq.m</option>
-                                                                </select>
+                                                        <div class="col-sm-2">
+                                                            <label>Unit Status</label>
+                                                            <select class="form-control select2" name="unit_status[]" id="unit_status">
+                                                                <option value="">Unit Status</option>
+                                                                <option value="1">Furnished</option>
+                                                                <option value="1">Un furnished</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <label class="control-label">Unit Rent Per Annum</label>
+                                                            <input type="number" name="unit_rent_per_annum[]" class="form-control" placeholder="Unit Rent Per Annum">
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <label class="control-label">Unit Size</label>
+                                                            <div class="input-group input-group">
+                                                                <div class="input-group-prepend select2">
+                                                                    <select name="" id="">
+                                                                        <option value="">Sq.ft</option>
+                                                                        <option value="">Sq.m</option>
+                                                                    </select>
+                                                                </div>
+                                                                <!-- /btn-group -->
+                                                                <input type="number" name="unit_size[]" class="form-control" placeholder="Unit Size">
                                                             </div>
-                                                            <!-- /btn-group -->
-                                                            <input type="number" name="unit_size[]" class="form-control" placeholder="Unit Size">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-3">
+                                                            <div class="icheck-success d-inline">
+                                                                <input type="checkbox" id="partition" class="partcheck" value="1">
+                                                                <label class="labelpermission" for="partition"> Partition </label>
+                                                            </div>
+                                                            <div class="icheck-success d-inline">
+                                                                <input type="checkbox" id="bedspace" class="bedcheck" value="1">
+                                                                <label class="labelpermission" for="bedspace"> Bedspace </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2" id="part">
+                                                            <label class="control-label">Total Partitions</label>
+                                                            <input type="text" name="total_partition[]" class="form-control" placeholder="Total Partitions">
+                                                        </div>
+                                                        <div class="col-sm-2" id="bs">
+                                                            <label class="control-label">Total Bed Spaces</label>
+                                                            <input type="text" name="total_bedspace[]" class="form-control" placeholder="Total Bed Spaces">
+                                                        </div>
+                                                        <div class="col-sm-2" id="subrnt">
+                                                            <label class="control-label">Rent per P/BS</label>
+                                                            <input type="text" name="rent_per_subunit[]" class="form-control" placeholder="Rent per subunit">
+                                                        </div>
+
+                                                    </div>
+                                                    <hr>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="col-sm-6">
+                                                        <button type="button" class=" btn btn-success" title="Add more" id="add-more"> Add more <i class="fa fa-plus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fullBuilding">
+                                                <div id="append-div-fullb">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-2">
+                                                            <label class="control-label">Unit Type</label>
+                                                            <select class="form-control select2" name="unit_type[]" id="unit_type0">
+                                                                <option value="">Unit Type</option>
+                                                                <option value="1">1BHK</option>
+                                                                <option value="2">2BHK</option>
+                                                                <option value="3">3BHK</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <label class="control-label">Unit Count</label>
+                                                            <input type="text" name="unit_count[]" class="form-control" placeholder="Unit Count">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group row part0">
-                                                    <div class="col-sm-2">
-                                                        <label class="control-label">Total Partitions</label>
-                                                        <input type="text" name="total_partition[]" class="form-control" placeholder="Total Partitions">
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <label class="control-label">Rent per Partitions</label>
-                                                        <input type="text" name="rent_per_partitions[]" class="form-control" placeholder="Rent per Partitions">
+                                                <div class="form-group">
+                                                    <div class="col-sm-6">
+                                                        <button type="button" class=" btn btn-success" title="Add more" id="add-more-fullBuilding"> Add more <i class="fa fa-plus"></i></button>
                                                     </div>
                                                 </div>
-                                                <div class="form-group row bs0">
-                                                    <div class="col-sm-2">
-                                                        <label class="control-label">Total Bed Spaces</label>
-                                                        <input type="text" name="total_bedspace[]" class="form-control" placeholder="Total Bed Spaces">
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <label class="control-label">Rent per Bed Spaces</label>
-                                                        <input type="text" name="rent_per_bedspace[]" class="form-control" placeholder="Rent per Bed Spaces">
-                                                    </div>
-                                                </div>
-                                                <hr>
                                             </div>
 
-                                            <div class="form-group">
-                                                <div class="col-sm-6">
-                                                    <button type="button" class=" btn btn-success" title="Add more" id="add-more"> Add more <i class="fa fa-plus"></i></button>
-                                                </div>
-                                            </div>
                                             <button class="btn btn-info" onclick="stepper.previous()">Previous</button>
                                             <button class="btn btn-info" onclick="stepper.next()">Next</button>
                                         </div>
@@ -720,21 +766,68 @@
 
 <script>
     $(document).ready(function() {
-        var i = 1;
-        $('#add-more').click(function() {
-            i++;
+        const container = document.getElementById('append-div');
+        const addMoreBtn = document.getElementById('add-more');
 
-            var html = '<div class="apdi"><div class="form-group row">' +
+
+
+        // Function to attach events for toggle + remove
+        function attachEvents(block) {
+            const check1 = block.querySelector('.partcheck');
+            const check2 = block.querySelector('.bedcheck');
+            const part = block.querySelector('.part');
+            const bs = block.querySelector('.bs');
+            const subrnt = block.querySelector('.subrnt');
+
+
+            part.style.display = 'none';
+            bs.style.display = 'none';
+            subrnt.style.display = 'none';
+
+
+            function toggleSubrnt() {
+                if (check1.checked || check2.checked) {
+                    subrnt.style.display = 'block';
+                } else {
+                    subrnt.style.display = 'none';
+                }
+            }
+            // // Checkbox toggle
+            check1.addEventListener('change', () => {
+                part.style.display = check1.checked ? 'block' : 'none';
+                toggleSubrnt();
+            });
+
+            check2.addEventListener('change', () => {
+                bs.style.display = check2.checked ? 'block' : 'none';
+                toggleSubrnt();
+            });
+
+            // Remove button
+            const removeBtn = block.querySelector('.dlt-div');
+            if (removeBtn) {
+                removeBtn.addEventListener('click', () => {
+                    block.remove();
+                });
+            }
+        }
+
+
+        // Add new block dynamically
+        var i = 0;
+        addMoreBtn.addEventListener('click', () => {
+            i++;
+            const newBlock = document.createElement('div');
+            newBlock.classList.add('apdi');
+            newBlock.innerHTML = '<div class="form-group row">' +
                 '<div class="col-sm-2 add-morecol2"><label class="control-label"> Unit No </label>' +
                 '<input type="text" name="l_name[]" class="form-control" placeholder="Unit No"></div>' +
                 '<div class="col-sm-2 add-morecol2"><label class="control-label"> Unit Type </label>' +
-                '<select class="form-control select2" data-index="' + i + '" name="unit_type[]" id="unit_type' + i + '">' +
+                '<select class="form-control select2" name="unit_type[]" id="unit_type">' +
                 '<option value="">Select</option>' +
                 '<option value="1">1BHK</option>' +
                 '<option value="2">2BHK</option>' +
                 '<option value="3">3BHK</option>' +
-                '<option value="part">Partition</option>' +
-                '<option value="bs">Bed Space</option>' +
                 '</select></div>' +
                 '<div class="col-sm-1 add-morecol2">' +
                 '<label class="control-label"> Floor No </label>' +
@@ -764,71 +857,85 @@
                 '</div>' +
                 '</div>' +
                 '</div>' +
-                '<div class="form-group row part' + i + '">' +
-                '<div class="col-sm-2 add-morecol2">' +
+                '<div class="form-group row">' +
+                '<div class="col-sm-3">' +
+                '<div class="icheck-success d-inline">' +
+                '<input type="checkbox" id="partition' + i + '" class="partcheck" value="1">' +
+                '<label class="labelpermission" for="partition' + i + '"> Partition </label>' +
+                '</div>' +
+                '<div class="icheck-success d-inline">' +
+                '<input type="checkbox" id="bedspace' + i + '" class="bedcheck" value="1">' +
+                '<label class="labelpermission" for="bedspace' + i + '"> Bedspace </label>' +
+                '</div>' +
+                '</div>' +
+                '<div class="col-sm-2 part">' +
                 '<label class="control-label">Total Partitions</label>' +
                 '<input type="text" name="total_partition[]" class="form-control" placeholder="Total Partitions">' +
                 '</div>' +
-                '<div class="col-sm-2 add-morecol2">' +
-                '<label class="control-label">Rent per Partitions</label>' +
-                '<input type="text" name="rent_per_partitions[]" class="form-control" placeholder="Rent per Partitions">' +
-                '</div>' +
-                '</div>' +
-                '<div class="form-group row bs' + i + '">' +
-                '<div class="col-sm-2 add-morecol2">' +
-                '<label class="control-label"> Total Bed Spaces</label>' +
+                '<div class="col-sm-2 bs">' +
+                '<label class="control-label">Total Bed Spaces</label>' +
                 '<input type="text" name="total_bedspace[]" class="form-control" placeholder="Total Bed Spaces">' +
                 '</div>' +
-                '<div class="col-sm-2 add-morecol2">' +
-                '<label class="control-label">Rent per Bed Spaces</label>' +
-                '<input type="text" name="rent_per_bedspace[]" class="form-control" placeholder="Rent per Bed Spaces">' +
+                '<div class="col-sm-2 subrnt">' +
+                '<label class="control-label">Rent per P/BS</label>' +
+                '<input type="text" name="rent_per_subunit[]" class="form-control" placeholder="Rent per subunit">' +
                 '</div>' +
                 '</div>' +
                 '<div class="col-sm-1">' +
                 '<button type="button" class=" btn-danger btn-block dlt-div btndetd pdd" title="Delete" data-toggle="tooltip">' +
                 '<i class="fa fa-trash fa-1x"></i></button>' +
-                '</div><hr></div></div>';
-            $('#append-div').append(html);
-
-            $('.dlt-div').click(function() {
-                $(this).parents('div.apdi').remove();
-            });
-
-            $('.part' + i).hide();
-            $('.bs' + i).hide();
-
-            $('#unit_type' + i).change(function() {
-                var unit_index = $(this).attr('data-index');
-                var unit_type = $(this).val();
-                showhideParbs(unit_index, unit_type);
-
-            });
+                '</div><hr></div>';
+            container.appendChild(newBlock);
+            attachEvents(newBlock);
         });
+
+
+        container.querySelectorAll('.apdi').forEach(attachEvents);
     });
-
-    function showhideParbs(val, unit_type) {
-
-        if (unit_type == 'part') {
-            $('.part' + val).show();
-            $('.bs' + val).hide();
-        } else if (unit_type == 'bs') {
-            $('.bs' + val).show();
-            $('.part' + val).hide();
-        } else {
-            $('.bs' + val).hide();
-            $('.part' + val).hide();
-        }
-    }
 </script>
 
 <script>
     $(document).ready(function() {
+        const check11 = document.getElementById('partition');
+        const check22 = document.getElementById('bedspace');
+        const part1 = document.getElementById('part');
+        const bs1 = document.getElementById('bs');
+        const subrnt1 = document.getElementById('subrnt');
+
+
+        part1.style.display = 'none';
+        bs1.style.display = 'none';
+        subrnt1.style.display = 'none';
+
+
+        function toggleSubrnt() {
+            if (check11.checked || check22.checked) {
+                subrnt1.style.display = 'block';
+            } else {
+                subrnt1.style.display = 'none';
+            }
+        }
+        // // Checkbox toggle
+        check11.addEventListener('change', () => {
+            part1.style.display = check11.checked ? 'block' : 'none';
+            toggleSubrnt();
+        });
+
+        check22.addEventListener('change', () => {
+            bs1.style.display = check22.checked ? 'block' : 'none';
+            toggleSubrnt();
+        });
+
         $('.bank').hide();
         $('.chq').hide();
         $('.chqot').hide();
         $('.part0').hide();
         $('.bs0').hide();
+        $('.subrnt0').hide();
+
+        $('.fullBuilding').hide();
     });
+
     $('#payment_mode').change(function() {
         var payment_mode = $(this).val();
         if (payment_mode == 'chq') {
@@ -863,24 +970,73 @@
             $('#client_email').val('adil@faateh.ae');
             $('#contact_person').val('Adil');
 
-            // $('#otc-step').hide();
-            // $("div[data-target='#otc-step']").hide();
-            // $("div[data-target='#otc-step']").prev('.line').hide();
-
         } else {
             $('#client_name').val('Faateh');
             $('#client_phone').val('0568856995');
             $('#client_email').val('adil@faateh.ae');
             $('#contact_person').val('Adil');
-
-            // $('#otc-step').show();
-            // $("div[data-target='#otc-step']").show();
-            // $("div[data-target='#otc-step']").prev('.line').show();
         }
     });
 
-    $('#unit_type0').change(function() {
-        var unit_type = $(this).val();
-        showhideParbs(0, unit_type);
+
+
+    $('.fullBuildCheck').click(function() {
+        if ($(this).prop('checked')) {
+            $('.fullBuilding').show();
+            $('.normalBuilding').hide();
+        } else {
+            $('.fullBuilding').hide();
+            $('.normalBuilding').show();
+        }
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        const container = document.getElementById('append-div-fullb');
+        const addMoreBtn = document.getElementById('add-more-fullBuilding');
+
+
+        // Function to attach events for toggle + remove
+        function attachEvents(block) {
+
+            // Remove button
+            const removeBtn = block.querySelector('.dlt-div-fullb');
+            if (removeBtn) {
+                removeBtn.addEventListener('click', () => {
+                    block.remove();
+                });
+            }
+        }
+
+
+        // Add new block dynamically
+        addMoreBtn.addEventListener('click', () => {
+            const newBlock = document.createElement('div');
+            newBlock.classList.add('add-more-fullBuilding');
+            newBlock.innerHTML = '<div class="form-group row">' +
+                '<div class="col-sm-2">' +
+                '<label class="control-label">Unit Type</label>' +
+                '<select class="form-control select2" name="unit_type[]" id="unit_type">' +
+                '<option value="">Unit Type</option>' +
+                '<option value="1">1BHK</option>' +
+                '<option value="2">2BHK</option>' +
+                '<option value="3">3BHK</option>' +
+                '</select>' +
+                '</div>' +
+                '<div class="col-sm-2">' +
+                '<label class="control-label">Unit Count</label>' +
+                '<input type="text" name="unit_count[]" class="form-control" placeholder="Unit Count">' +
+                '</div>' +
+                '<div class="col-sm-1">' +
+                '<button type="button" class=" btn-danger btn-block dlt-div-fullb btndetd fullbdel" title="Delete" data-toggle="tooltip">' +
+                '<i class="fa fa-trash fa-1x"></i></button>' +
+                '</div><hr></div>';
+            container.appendChild(newBlock);
+            attachEvents(newBlock);
+        });
+
+
+        container.querySelectorAll('.add-more-fullBuilding').forEach(attachEvents);
     });
 </script>

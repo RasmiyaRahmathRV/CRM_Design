@@ -1,6 +1,8 @@
 <?php include('../layout/header.php'); ?>
 <!-- Tempusdominus Bootstrap 4 -->
 <link rel="stylesheet" href="../assets/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="../assets/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- Select2 -->
 <link rel="stylesheet" href="../assets/select2/css/select2.min.css">
 <link rel="stylesheet" href="../assets/select2-bootstrap4-theme/select2-bootstrap4.min.css">
@@ -39,8 +41,10 @@
                         <div class="card-header">
                             <!-- <h3 class="card-title">Property Details</h3> -->
                             <span class="float-right">
+                                <!-- <button class="btn btn-info float-right m-1" data-toggle="modal"
+                                    data-target="#modal-Property">Add Investor Payout</button> -->
                                 <button class="btn btn-info float-right m-1" data-toggle="modal"
-                                    data-target="#modal-Property">Add Investor Payout</button>
+                                    data-target="#modal-payout-bulk">Payout</button>
                                 <button class="btn btn-secondary float-right m-1" data-toggle="modal"
                                     data-target="#modal-import">Import</button>
                             </span>
@@ -50,7 +54,13 @@
                             <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" name="selectall" id="selectAll" value="1" onclick="toggleAllCheckboxes()">
+                                                <label for="selectAll">Select All
+                                                </label>
+                                            </div>
+                                        </th>
                                         <th>Investor Name</th>
                                         <th style="width: 5%">Investment Amount</th>
                                         <th>Payout Date</th>
@@ -64,7 +74,13 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
+                                        <td>
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="ichek1" class="groupCheckbox" name="installment_id[]">
+                                                <label for="ichek1">
+                                                </label>
+                                            </div>
+                                        </td>
                                         <td>Investor</td>
                                         <td>AED 1000</td>
                                         <td>08/08/2024</td>
@@ -74,9 +90,11 @@
                                         <td>Bank Transfer</td>
                                         <td>Fama</td>
                                         <td>
-                                            <button class="btn btn-info" data-toggle="modal"
+                                            <button class="btn btn-info float-right m-1" data-toggle="modal"
+                                                data-target="#modal-payout-single">Payout</button>
+                                            <!-- <button class="btn btn-info" data-toggle="modal"
                                                 data-target="#modal-Property"><i class="fas fa-pencil-alt"></i></button>
-                                            <button class="btn btn-danger" onclick="deleteConf()"><i class="fas fa-trash"></i></button>
+                                            <button class="btn btn-danger" onclick="deleteConf()"><i class="fas fa-trash"></i></button> -->
                                         </td>
                                     </tr>
                                 </tbody>
@@ -226,9 +244,86 @@
             </div>
             <!-- /.modal-dialog -->
         </div>
-        <!-- /.modal -->
-    </section>
-    <!-- /.content -->
+
+        <div class="modal fade" id="modal-payout-bulk">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Investor Payout</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="" id="ContractImportForm" method="POST" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="exampleInputEmail1">Payout Date</label>
+                                    <div class="input-group date" id="clearingdate" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" data-target="#clearingdate" placeholder="dd-mm-YYYY" />
+                                        <div class="input-group-append" data-target="#clearingdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" id="clearBtn" class="btn btn-info">Clear</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-dialog -->
+
+        <div class="modal fade" id="modal-payout-single">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Investor Payout</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="" id="ContractImportForm" method="POST" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="exampleInputEmail1">Payout Date</label>
+                                    <div class="input-group date" id="clearingdate" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" data-target="#clearingdate" placeholder="dd-mm-YYYY" />
+                                        <div class="input-group-append" data-target="#clearingdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="exampleInputEmail1">Payout Amount</label>
+                                    <input type="text" class="form-control" placeholder="Clearing Amount">
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" id="clearBtn" class="btn btn-info">Clear</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+</section>
+<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 
@@ -293,4 +388,13 @@
             $('.chqot').hide();
         }
     });
+
+    function toggleAllCheckboxes() {
+        document.getElementById('selectAll').addEventListener('change', function() {
+            const itemCheckboxes = document.querySelectorAll('.groupCheckbox');
+            itemCheckboxes.forEach(checkbox => {
+                checkbox.checked = this.checked; // Set checked status based on the "Select All" checkbox
+            });
+        });
+    }
 </script>

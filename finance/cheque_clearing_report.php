@@ -23,12 +23,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Project Acquisition</h1>
+                    <h1>Statement</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">Home</a></li>
-                        <li class="breadcrumb-item active">Project Acquisition</li>
+                        <li class="breadcrumb-item active">Statement</li>
                     </ol>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                                 <!-- form start -->
                                 <form class="form-horizontal">
                                     <div class="form-group row m-4">
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <label for="exampleInputEmail1">From</label>
                                             <div class="input-group date" id="dateFrom" data-target-input="nearest">
                                                 <input type="text" class="form-control datetimepicker-input" data-target="#dateFrom" placeholder="dd-mm-YYYY" />
@@ -58,7 +58,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <label for="exampleInputEmail1">To</label>
                                             <div class="input-group date" id="dateTo" data-target-input="nearest">
                                                 <input type="text" class="form-control datetimepicker-input" data-target="#dateTo" placeholder="dd-mm-YYYY" />
@@ -67,59 +67,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Company</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Company</option>
-                                                <option value="1">Fama real estate</option>
-                                                <option value="1">Walls and Bricks</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Project</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Project</option>
-                                                <option value="1">PRJ00001</option>
-                                            </select>
+                                        <div class="col-md-1">
+                                            <button type="button" class="btn btn-info searchbtnchq">Search</button>
                                         </div>
                                     </div>
-                                    <div class="form-group row  m-4">
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Vendor</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Vendor</option>
-                                                <option value="1">Vendor 1</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Property</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Property</option>
-                                                <option value="1">Property 1</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Unit type</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Unit type</option>
-                                                <option value="1">Unit 1</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Project Status</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Status</option>
-                                                <option value="1">New</option>
-                                                <option value="1">Renewal</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-1 float-right mb-2">
-                                            <button type="button" class="btn btn-info">Search</button>
-                                        </div>
-                                    </div>
-
                                 </form>
                             </div>
                             <!-- /.card -->
@@ -131,49 +82,27 @@
                                         <thead>
                                             <tr>
                                                 <th>Project</th>
-                                                <th>Start</th>
-                                                <th>Expiry</th>
                                                 <th>Vendor</th>
-                                                <th>Bldg</th>
-                                                <th>Locality</th>
+                                                <th>Building</th>
                                                 <th>Unit</th>
-                                                <th>Tenant Name</th>
-                                                <th>Commition</th>
-                                                <th>Deposit</th>
-                                                <th>OTC</th>
-                                                <th>Rent P.A</th>
-                                                <th>Total Project Cost</th>
-                                                <th>Total Revenue</th>
-                                                <th>Period Rent</th>
-                                                <th>Tenure</th>
-                                                <th>Agent</th>
-                                                <th>Mobile</th>
-                                                <th>Status</th>
-                                                <th>CreatedAt</th>
+                                                <th>Due Date</th>
+                                                <th>Clear Date</th>
+                                                <th>Composition</th>
+                                                <th>Amount Paid</th>
+                                                <th>Pending</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>PRJ00001</td>
-                                                <td>01/08/2025</td>
-                                                <td>01/08/2026</td>
-                                                <td>Vendor 1</td>
-                                                <td>Building name</td>
-                                                <td>Unit 1</td>
-                                                <td>Tenant</td>
-                                                <td>5000.00</td>
-                                                <td>5000.00</td>
-                                                <td>50000.00</td>
-                                                <td>100000.00</td>
-                                                <td>01/08/2025</td>
-                                                <td>PRJ00001</td>
-                                                <td>Building name</td>
-                                                <td>Unit 1</td>
+                                                <td>AL EKLEEL AL ZAHABI</td>
+                                                <td>ABR COUNTY BUILDING</td>
                                                 <td>102</td>
-                                                <td>150000.00</td>
+                                                <td>10-09-2025</td>
+                                                <td>13-09-2025</td>
                                                 <td>RENT 1/4</td>
-                                                <td>100000.00</td>
-                                                <td>50000.00</td>
+                                                <td>51600.00</td>
+                                                <td>0.00</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -220,13 +149,20 @@
 <script>
     $(function() {
         $("#example1").DataTable({
-            "responsive": false,
+            "responsive": true,
             "lengthChange": false,
-            "autoWidth": true,
-            "scrollX": true,
+            "autoWidth": false,
             "buttons": ["excel", "print"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
     });
     $('#dateFrom').datetimepicker({
         format: 'DD-MM-YYYY'
@@ -237,7 +173,13 @@
     });
 
     $(document).ready(function() {
+        $('.searchCheque').hide();
+
         $('.propertyselect').hide();
         $('.unitselect').hide();
+    });
+
+    $('.searchbtnchq').click(function() {
+        $('.searchCheque').show();
     });
 </script>

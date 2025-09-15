@@ -1,5 +1,5 @@
 <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
+    <div class="container-fluid wrapper">
 
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -290,9 +290,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../finance/statement.php" class="nav-link">
+                                    <a href="../finance/cheque_clearing_report.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Statement</p>
+                                        <p>Cheque Clearing Report</p>
                                     </a>
                                 </li>
                             </ul>
@@ -332,10 +332,52 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../reports/inventory.php" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Inventory</p>
+                                        <p>
+                                            Inventory
+                                            <i class="fas fa-angle-left right"></i>
+
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="../reports/company_wise.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Company Wise</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/flat_wise.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Flat Wise</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/vendor_wise.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Vendor Wise</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/tenant_wise.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Tenant Wise Partition</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/full_building.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Full Building</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/location_wise.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Location Wise</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../reports/roi.php" class="nav-link">
@@ -348,6 +390,35 @@
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Renewal</p>
                                     </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Investment
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="../reports/investorwise_inv_analysis.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Investment Summary</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/companywise_investment.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Company Wise Analysis</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/profit_release.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Profit Release</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>

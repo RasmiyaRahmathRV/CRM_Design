@@ -50,12 +50,15 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Investor Name</th>
-                                        <th>Country</th>
+                                        <th>Nationality</th>
+                                        <th>Country of Recidence</th>
                                         <th>Reference</th>
-                                        <!-- <th>Email</th> -->
+                                        <th>Email</th>
+                                        <th>Address</th>
                                         <th>Emirates ID/ Passport No</th>
+                                        <th>Payment Mode</th>
                                         <th>Bank Details</th>
-                                        <th>IBAN</th>
+                                        <!-- <th>IBAN</th> -->
                                         <th>Mobile</th>
                                         <th>Action</th>
                                     </tr>
@@ -63,14 +66,17 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Inv 1</td>
+                                        <td> Mr. Ahmad Atieh Abdul Mohsen Sobuh</td>
+                                        <td>Jordan</td>
                                         <td>UAE</td>
-                                        <td>Ref 1</td>
-                                        <!-- <td>demo@demo.com</td> -->
-                                        <td>12345</td>
-                                        <td>bank name</td>
-                                        <td>AE32123</td>
-                                        <td>0987654</td>
+                                        <td>Reference 1</td>
+                                        <td>asubah@eim.ae</td>
+                                        <td>Al Majaz 3, Sharjah, UAE</td>
+                                        <td>784-1971-0973742-5</td>
+                                        <td>Bank Transfer</td>
+                                        <td>Dubai Islamic Bank</td>
+                                        <!-- <td>AE860240009580614910301</td> -->
+                                        <td>+97150 450 0456</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
                                                 data-target="#modal-Property">Edit</button>
@@ -92,7 +98,7 @@
 
 
         <div class="modal fade" id="modal-Property">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Investor</h4>
@@ -105,53 +111,86 @@
                         <div class="modal-body">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label>Investor name</label>
                                         <input type="text" class="form-control" placeholder="Investor name">
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label>Country</label>
-                                        <select class="form-control select2">
-                                            <option value="">Select Country</option>
-                                            <option value="1">UAE</option>
-                                            <option value="2">Jordan</option>
-                                        </select>
-                                    </div>
-                                </div>
 
-                                <div class="form-group row">
-                                    <div class="col-sm-6">
-                                        <label for="inputEmail3" class="col-form-label">Reference</label>
-                                        <input type="text" class="form-control" placeholder="Reference">
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Mobile</label>
+                                        <input type="text" name="Property_name" id="Property_name" class="form-control"
+                                            id="inputEmail3" placeholder="Mobile">
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Email</label>
                                         <input type="text" class="form-control" placeholder="Email">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <div class="col-sm-6">
-                                        <label for="inputEmail3" class="col-form-label">Emirates ID/ Passport No</label>
-                                        <input type="text" name="Property_name" id="Property_name" class="form-control" placeholder="Emirates ID/ Passport No">
+                                    <div class="col-sm-4">
+                                        <label>Nationality</label>
+                                        <select class="form-control select2">
+                                            <option value="">Select Nationality</option>
+                                            <option value="1">UAE</option>
+                                            <option value="2">Jordan</option>
+                                        </select>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label for="inputEmail3" class="col-form-label">Mobile</label>
-                                        <input type="text" name="Property_name" id="Property_name" class="form-control"
-                                            id="inputEmail3" placeholder="Mobile">
+
+                                    <div class="col-sm-4">
+                                        <label>Country of Residence</label>
+                                        <select class="form-control select2">
+                                            <option value="">Select Country</option>
+                                            <option value="1">UAE</option>
+                                            <option value="2">Jordan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="inputEmail3" class="col-form-label">Mode of Payment</label>
+                                        <select class="form-control select2">
+                                            <option value="">Select Payment</option>
+                                            <option value="1">Bank Transfer</option>
+                                            <option value="2">Cash</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Emirates ID/ Investor ID</label>
+                                        <input type="text" name="Property_name" id="Property_name" class="form-control" placeholder="Emirates ID/ Investor ID">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Passport</label>
+                                        <input type="text" name="Property_name" id="Property_name" class="form-control" placeholder="Passport No">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Reference</label>
+                                        <input type="text" class="form-control" placeholder="Reference">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <label for="inputEmail3" class="col-form-label">Benenficiary Name</label>
+                                        <input type="text" name="Property_name" id="Property_name" class="form-control" placeholder="Benenficiary Name">
+                                    </div>
+                                    <div class="col-md-4">
                                         <label for="inputEmail3" class="col-form-label">Bank Details</label>
                                         <input type="text" name="Property_name" id="Property_name" class="form-control" placeholder="Bank Details">
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-md-4">
                                         <label for="inputEmail3" class="col-form-label">IBAN</label>
                                         <input type="text" name="Property_name" id="Property_name" class="form-control"
                                             id="inputEmail3" placeholder="IBAN">
                                     </div>
                                 </div>
+                                <div class="form-group row">
+
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Address</label>
+                                        <textarea class="form-control" name="" id=""></textarea>
+                                    </div>
+                                </div>
+
                             </div>
                             <!-- /.card-body -->
                         </div>
@@ -223,10 +262,11 @@
 <script>
     $(function() {
         $("#example1").DataTable({
-            "responsive": true,
+            "responsive": false,
             "lengthChange": false,
             "autoWidth": false,
-            "buttons": ["excel"]
+            "scrollX": true,
+            "buttons": ["excel", "colvis"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
 
     });

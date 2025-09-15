@@ -54,9 +54,11 @@
                                         <th>Investor Name</th>
                                         <th>Investment Amount</th>
                                         <th>Date</th>
-                                        <th>Payment Interval</th>
+                                        <th>Profit Interval</th>
                                         <th>Profit %</th>
                                         <th>Maturity date</th>
+                                        <th>Grace Period </th>
+                                        <th>Payout Batch</th>
                                         <th>Nominee Name</th>
                                         <th>Action</th>
                                     </tr>
@@ -64,13 +66,15 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Inv 1</td>
-                                        <td>UAE</td>
-                                        <td>Ref 1</td>
-                                        <td>12345</td>
-                                        <td>bank name</td>
-                                        <td>AE32123</td>
-                                        <td>0987654</td>
+                                        <td> Mr. Ahmad Atieh Abdul Mohsen Sobuh</td>
+                                        <td>150,000</td>
+                                        <td>08-09-2025</td>
+                                        <td>Monthly</td>
+                                        <td>60%</td>
+                                        <td>08-09-2026</td>
+                                        <td>45 Days</td>
+                                        <td>1-10</td>
+                                        <td>NIL</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
                                                 data-target="#modal-Property">Edit</button>
@@ -92,7 +96,7 @@
 
 
         <div class="modal fade" id="modal-Property">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Investment</h4>
@@ -105,21 +109,18 @@
                         <div class="modal-body">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label>Investor</label>
                                         <select class="form-control select2">
                                             <option value="">Select Investor</option>
                                             <option value="1">Inv 1</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label>Investment Amount</label>
                                         <input type="text" class="form-control" placeholder="Investment Amount">
                                     </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Investment Date</label>
                                         <div class="input-group date" id="investmentdate" data-target-input="nearest">
                                             <input type="text" class="form-control datetimepicker-input" data-target="#investmentdate" placeholder="dd-mm-YYYY" />
@@ -128,41 +129,36 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                </div>
+
+                                <div class="form-group row">
+
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Investment Term (Months)</label>
                                         <select class="form-control select2">
                                             <option value="">Select Term</option>
-                                            <?php for ($i = 1; $i < 13; $i++) { ?>
+                                            <?php for ($i = 1; $i < 15; $i++) { ?>
                                                 <option value="1"><?= $i ?></option>
                                             <?php } ?>
                                         </select>
                                     </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <div class="col-sm-6">
-                                        <label for="inputEmail3" class="col-form-label">Payment Interval (Months)</label>
-                                        <select class="form-control select2">
-                                            <option value="">Select Term</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Profit Interval (Months)</label>
                                         <select class="form-control select2">
                                             <option value="">Select Term</option>
                                             <option value="1">Monthly</option>
                                             <option value="4">Quarterly</option>
                                             <option value="6">Halfyearly</option>
+                                            <option value="6">Yearly</option>
                                         </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label>Grace Period ( Days )</label>
+                                        <input type="number" class="form-control" placeholder="Grace Period">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Maturity date</label>
                                         <div class="input-group date" id="maturityDate" data-target-input="nearest">
                                             <input type="text" class="form-control datetimepicker-input" data-target="#maturityDate" placeholder="dd-mm-YYYY" />
@@ -171,22 +167,40 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Profit %</label>
                                         <input type="text" name="Property_name" id="Property_name" class="form-control"
                                             id="inputEmail3" placeholder="Profit %">
                                     </div>
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Payout Batch</label>
+                                        <select class="form-control select2">
+                                            <option value="">Select Batch</option>
+                                            <option value="1">1 - 10</option>
+                                            <option value="4">11 - 20</option>
+                                            <option value="6">21 - 31</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Nominee Name</label>
                                         <input type="text" name="Property_name" id="Property_name" class="form-control"
                                             id="inputEmail3" placeholder="Nominee Name">
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Nominee Contact</label>
                                         <input type="text" name="Property_name" id="Property_name" class="form-control"
                                             id="inputEmail3" placeholder="Nominee Contact">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Company</label>
+                                        <select class="form-control select2">
+                                            <option value="">Select Company</option>
+                                            <option value="1">Fama Real estate</option>
+                                            <option value="4">Walls and Bricks</option>
+                                            <option value="6">Floors and Doors</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

@@ -159,7 +159,7 @@
                                                     <td>100000.00</td>
                                                     <td>RENT 1/4</td>
                                                     <td>
-                                                        <a class="btn btn-success  btn-sm" title="Clear cheque" data-toggle="modal" data-target="#modal-success-clear-all">Clear</a>
+                                                        <a class="btn btn-success  btn-sm" title="Clear cheque" data-toggle="modal" data-target="#modal-success">Clear</a>
                                                         <a class="btn btn-danger btn-sm" title="return" data-toggle="modal" data-target="#modal-return-cheque">Return</a>
                                                     </td>
                                                 </tr>
@@ -199,6 +199,45 @@
                                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" id="clearBtn" class="btn btn-info">Clear</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+        <div class="modal fade" id="modal-success">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">You Are Going To Pass This Cheque!</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="" id="ContractImportForm" method="POST" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="exampleInputEmail1">Clearing Date</label>
+                                    <div class="input-group date" id="clearingdate" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" data-target="#clearingdate" placeholder="dd-mm-YYYY" />
+                                        <div class="input-group-append" data-target="#clearingdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="exampleInputEmail1">Clearing Amount</label>
+                                    <input type="text" class="form-control" placeholder="Clearing Amount">
                                 </div>
                             </div>
                             <!-- /.card-body -->
