@@ -78,9 +78,6 @@
                             <!-- /.card -->
 
                             <div class="card">
-                                <div class="card-header">
-                                    <a class="btn btn-info float-right" href="../Reports/detailed_disbursement.php">Detailed Disbursement Report</a>
-                                </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="example1" class="table table-bordered projects ">

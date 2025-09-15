@@ -418,6 +418,12 @@
                                                 <p>Profit Release</p>
                                             </a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a href="../reports/nationality_wise_report.php" class="nav-link">
+                                                <i class="nav-icon fas fa-file-alt"></i>
+                                                <p>Nationality Wise Report</p>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>

@@ -23,12 +23,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Company Wise Investment</h1>
+                    <h1>Nationality Wise Report</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">Home</a></li>
-                        <li class="breadcrumb-item active">Company Wise Investment</li>
+                        <li class="breadcrumb-item active">Nationality Wise Report</li>
                     </ol>
                 </div>
             </div>
@@ -79,9 +79,7 @@
 
                             <div class="card">
                                 <div class="card-header">
-                                    <a class="btn btn-info float-right ml-2" href="../Reports/companywise_inv_detailed.php">Detailed report</a>
-                                    <a class="btn btn-info float-right" href="../Reports/detailed_disbursement.php">Detailed Disbursement Report</a>
-
+                                    <a class="btn btn-info float-right ml-2" href="../Reports/nationality_wise_detailed_report.php">Detailed report</a>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
@@ -89,94 +87,28 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Company Name</th>
+                                                <th>Nationality</th>
+                                                <th>Count of Investors</th>
                                                 <th>Investment Amount</th>
-                                                <th>Total Profit Amount to be paid</th>
-                                                <th> % Profit Released</th>
-                                                <!-- <th></th> -->
+                                                <th>% Grand Total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>F&D</td>
-                                                <td>13,282,525</td>
-                                                <td>4,601,373</td>
-                                                <td>58.11%</td>
+                                                <td>Jordan</td>
+                                                <td>42</td>
+                                                <td>24,698,846</td>
+                                                <td>39%</td>
                                             </tr>
                                             <tr>
                                                 <td>1</td>
-                                                <td>FAMA</td>
-                                                <td>13,976,500</td>
-                                                <td>9,336,346</td>
-                                                <td>64.33%</td>
+                                                <td>UAE</td>
+                                                <td>32</td>
+                                                <td>20,025,469</td>
+                                                <td>30%</td>
                                             </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>W&B</td>
-                                                <td>9,839,151</td>
-                                                <td>4,023,091</td>
-                                                <td>52.44%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>FAMA INV</td>
-                                                <td>22,131,841</td>
-                                                <td>5,683,375</td>
-                                                <td>14.52%</td>
-                                            </tr>
-
-
                                         </tbody>
-
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header">
-
-                                    <h5>Fama Investment Disbursement</h5>
-
-                                </div>
-                                <div class="card-body">
-                                    <table id="example2" class="table table-bordered projects ">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Fama Investment Disbursement</th>
-                                                <th>Investment Amount</th>
-                                                <th>% Of Grand Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Walls and Bricks</td>
-                                                <td>16,190,432</td>
-                                                <td>73.15%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Floors and Doors</td>
-                                                <td>4,237,040</td>
-                                                <td>19.14%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Fama Real Estate</td>
-                                                <td>1,694,369</td>
-                                                <td>7.66%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Fama Investments</td>
-                                                <td>10,000</td>
-                                                <td>0.05%</td>
-                                            </tr>
-
-                                        </tbody>
-
                                     </table>
                                 </div>
                             </div>
@@ -227,14 +159,6 @@
             "scrollX": true,
             "buttons": ["excel", "print", "colvis"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-
-        $("#example2").DataTable({
-            "responsive": false,
-            "lengthChange": false,
-            "autoWidth": false,
-            "scrollX": true,
-            "buttons": ["excel", "print", "colvis"]
-        }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
 
     });
     $('#dateFrom').datetimepicker({
