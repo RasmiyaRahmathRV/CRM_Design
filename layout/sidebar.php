@@ -271,6 +271,12 @@
                                         <p>Investor Payout</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="../investment/investment_soa.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Investment SOA</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 

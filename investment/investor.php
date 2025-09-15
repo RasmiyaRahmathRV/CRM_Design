@@ -189,6 +189,15 @@
                                         <label for="inputEmail3" class="col-form-label">Address</label>
                                         <textarea class="form-control" name="" id=""></textarea>
                                     </div>
+                                    <div class="col-sm-4">
+                                        <label for="inputEmail3" class="col-form-label">Payout Batch</label>
+                                        <select class="form-control select2">
+                                            <option value="">Select Batch</option>
+                                            <option value="1">1 - 10</option>
+                                            <option value="4">11 - 20</option>
+                                            <option value="6">21 - 31</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                             </div>

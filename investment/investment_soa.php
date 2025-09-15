@@ -20,12 +20,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Investor Payout</h1>
+                    <h1>Investment SOA</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">Home</a></li>
-                        <li class="breadcrumb-item active">Investor Payout</li>
+                        <li class="breadcrumb-item active">Investment SOA</li>
                     </ol>
                 </div>
             </div>
@@ -47,32 +47,24 @@
                                 <form class="form-horizontal">
                                     <div class="form-group row m-4">
                                         <div class="col-md-3">
-                                            <label for="inputPassword3">Month</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Month</option>
-                                                <?php for ($m = 1; $m <= 12; ++$m) { ?>
-                                                    <option value="1"><?= date('F', mktime(0, 0, 0, $m, 1)) ?></option>
-                                                <?php } ?>
-                                            </select>
+                                            <label for="exampleInputEmail1">From</label>
+                                            <div class="input-group date" id="dateFrom" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#dateFrom" placeholder="dd-mm-YYYY" />
+                                                <div class="input-group-append" data-target="#dateFrom" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <label for="inputPassword3">Batch</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Batch</option>
-                                                <option value="1">1-10</option>
-                                                <option value="1">11-20</option>
-                                                <option value="1">21-31</option>
-                                            </select>
+                                            <label for="exampleInputEmail1">To</label>
+                                            <div class="input-group date" id="dateTo" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#dateTo" placeholder="dd-mm-YYYY" />
+                                                <div class="input-group-append" data-target="#dateTo" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword3">Investor</label>
-                                            <select class="form-control select2" name="area_id">
-                                                <option value="">Select Investor</option>
-                                                <option value="1">Investor</option>
-                                            </select>
-                                        </div>
-                                        <!-- </div>
-                                    <div class="form-group"> -->
+
                                         <div class="col-md-1 float-right mt-31">
                                             <button type="button" class="btn btn-info">Search</button>
                                         </div>
@@ -82,61 +74,42 @@
                             </div>
                             <!-- /.card -->
                             <div class="card">
-                                <div class="card-header">
-                                    <!-- <h3 class="card-title">Property Details</h3> -->
-                                    <span class="float-right">
-                                        <!-- <button class="btn btn-info float-right m-1" data-toggle="modal"
-                                    data-target="#modal-Property">Add Investor Payout</button> -->
-                                        <button class="btn btn-info float-right m-1" data-toggle="modal"
-                                            data-target="#modal-payout-bulk">Payout</button>
-                                    </span>
-                                </div>
                                 <div class="card-body">
                                     <table id="example1" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>
-                                                    <div class="icheck-primary d-inline">
-                                                        <input type="checkbox" name="selectall" id="selectAll" value="1" onclick="toggleAllCheckboxes()">
-                                                        <label for="selectAll">Select All
-                                                        </label>
-                                                    </div>
-                                                </th>
+                                                <th>#</th>
+                                                <th>Date</th>
+                                                <th>Account Name</th>
                                                 <th>Investor Name</th>
-                                                <th style="width: 5%">Investment Amount</th>
-                                                <th>Payout Date</th>
-                                                <th style="width: 8%">Principal Amount</th>
-                                                <th style="width: 8%">Profit Amount</th>
-                                                <th>Total payout</th>
-                                                <th>Payment Mode</th>
-                                                <th>Beneficiary</th>
-                                                <th>Action</th>
+                                                <th>Credit</th>
+                                                <th>Debit</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>
-                                                    <div class="icheck-primary d-inline">
-                                                        <input type="checkbox" id="ichek1" class="groupCheckbox" name="installment_id[]">
-                                                        <label for="ichek1">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Investor</td>
-                                                <td>AED 1000</td>
-                                                <td>08/08/2024</td>
-                                                <td>AED 1000</td>
-                                                <td>AED 200</td>
-                                                <td>AED 1200</td>
-                                                <td>Bank Transfer</td>
-                                                <td>Fama</td>
-                                                <td>
-                                                    <button class="btn btn-info float-right m-1" data-toggle="modal"
-                                                        data-target="#modal-payout-single">Payout</button>
-                                                    <!-- <button class="btn btn-info" data-toggle="modal"
-                                                data-target="#modal-Property"><i class="fas fa-pencil-alt"></i></button>
-                                            <button class="btn btn-danger" onclick="deleteConf()"><i class="fas fa-trash"></i></button> -->
-                                                </td>
+                                                <td>1</td>
+                                                <td>01/09/2025</td>
+                                                <td>Investment</td>
+                                                <td>John</td>
+                                                <td>1000.00</td>
+                                                <td>0.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>15/09/2025</td>
+                                                <td>Payout</td>
+                                                <td>Adam</td>
+                                                <td>0.00</td>
+                                                <td>2000.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>15/09/2025</td>
+                                                <td>Payout</td>
+                                                <td>Alex</td>
+                                                <td>0.00</td>
+                                                <td>3300.00</td>
                                             </tr>
                                         </tbody>
                                     </table>

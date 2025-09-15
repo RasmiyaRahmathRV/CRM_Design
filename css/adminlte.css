@@ -52430,8 +52430,12 @@ label:not(.form-check-label):not(.custom-file-label) {
   margin-top: 32px;
 }
 
-.searchbtnchq {
+.mt-31 {
   margin-top: 31px;
+}
+
+.searchbtnchq{
+   margin-top: 31px;
 }
 
 .no-bullets {
