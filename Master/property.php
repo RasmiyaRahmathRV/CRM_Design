@@ -193,12 +193,12 @@
                                     <div class="col-sm-6">
                                         <label for="inputEmail3" class="col-form-label">Property Size</label>
                                         <input type="text" name="Property_name" id="Property_name" class="form-control"
-                                            id="inputEmail3" placeholder="Property Name">
+                                            id="inputEmail3" placeholder="Property Size">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="inputEmail3" class="col-form-label">Plot No</label>
                                         <input type="text" name="Property_name" id="Property_name" class="form-control"
-                                            id="inputEmail3" placeholder="Property Name">
+                                            id="inputEmail3" placeholder="Plot No">
                                     </div>
                                 </div>
                             </div>

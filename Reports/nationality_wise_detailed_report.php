@@ -68,8 +68,8 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <label for="inputEmail3" class="col-sm-4 col-form-label">Nationality</label>
-                                            <select class="form-control select2 col-sm-8" name="area_id" id="area_id">
+                                            <label for="inputEmail3">Nationality</label>
+                                            <select class="form-control select2 " name="area_id" id="area_id">
                                                 <option value="">Select Nationality</option>
                                                 <option value="1">Jordan</option>
                                             </select>
@@ -120,6 +120,9 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <div class="col-12 mt-4">
+                                        <a href="../Reports/nationality_wise_report.php" class="btn btn-default float-left">Back</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

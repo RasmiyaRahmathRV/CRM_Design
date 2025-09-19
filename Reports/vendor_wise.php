@@ -84,7 +84,7 @@
                                     <table id="example1" class="table table-bordered projects ">
                                         <thead>
                                             <tr>
-                                                <th rowspan="2">Company Name</th>
+                                                <th rowspan="2">Vendor Name</th>
                                                 <th colspan="8">Direct Flat</th>
                                                 <th colspan="8">Under Faateh</th>
                                             </tr>
@@ -109,7 +109,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Fama real estate</td>
+                                                <td>Inop Realty LLC</td>
                                                 <td>54</td>
                                                 <td>64</td>
                                                 <td>454</td>
@@ -128,7 +128,7 @@
                                                 <td>1764</td>
                                             </tr>
                                             <tr>
-                                                <td>Lock & key</td>
+                                                <td>Al Kabbani Properties</td>
                                                 <td>54</td>
                                                 <td>64</td>
                                                 <td>454</td>

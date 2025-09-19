@@ -67,6 +67,14 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-md-3">
+                                            <label for="inputPassword3">Location</label>
+                                            <select class="form-control select2" name="area_id">
+                                                <option value="">Select Location</option>
+                                                <option value="1">Al Barsha</option>
+                                                <option value="1">Al Muteena</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-1 float-right mb-2">
@@ -85,6 +93,7 @@
                                         <thead>
                                             <tr>
                                                 <th rowspan="2">Location</th>
+                                                <th rowspan="2">Building name</th>
                                                 <th colspan="8">Direct Flats</th>
                                                 <th colspan="8">Under Faateh</th>
                                                 <th rowspan="2">Company Wise Total</th>
@@ -111,6 +120,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td>Al Muteena</td>
                                                 <td>25 Muteena Building</td>
                                                 <td>0</td>
                                                 <td>0</td>
@@ -132,7 +142,8 @@
                                                 <td>10.80%</td>
                                             </tr>
                                             <tr>
-                                                <td>25 Muteena Building</td>
+                                                <td>AL MURAQQABAT</td>
+                                                <td>Liwa 59 Building</td>
                                                 <td>0</td>
                                                 <td>0</td>
                                                 <td>0</td>
@@ -154,7 +165,7 @@
                                             </tr>
                                             <tr>
                                                 <th>Grand Total</th>
-                                                <th>156</th>
+                                                <th></th>
                                                 <th>353</th>
                                                 <th>1281</th>
                                                 <th>1645</th>
@@ -172,9 +183,14 @@
                                                 <th>1766</th>
                                                 <th>0</th>
                                                 <th>12</th>
+                                                <th>12</th>
                                             </tr>
                                         </tbody>
                                     </table>
+
+                                    <div class="col-12 mt-4">
+                                        <a href="../Reports/location_wise.php" class="btn btn-default float-left">Back</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

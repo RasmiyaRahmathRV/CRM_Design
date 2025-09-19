@@ -116,16 +116,16 @@
                                                 <td>454</td>
                                                 <td>728</td>
                                                 <td>15</td>
-                                                <td></td>
+                                                <td>2</td>
                                                 <td>1315</td>
                                                 <td>74</td>
                                                 <td>259</td>
                                                 <td>1147</td>
-                                                <td></td>
+                                                <td>1</td>
                                                 <td>267</td>
                                                 <td>15</td>
                                                 <td>2</td>
-                                                <td></td>
+                                                <td>1</td>
                                                 <td>1764</td>
                                             </tr>
                                             <tr>

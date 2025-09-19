@@ -78,9 +78,6 @@
                             <!-- /.card -->
 
                             <div class="card">
-                                <div class="card-header">
-                                    <a class="btn btn-info float-right" href="../Reports/companywise_inv_detailed.php">Detailed report</a>
-                                </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="example1" class="table table-bordered projects ">
@@ -115,24 +112,24 @@
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>F&D</td>
-                                                <td>13,282,525</td>
-                                                <td>4,601,373</td>
-                                                <td>58.11%</td>
-                                                <td>1</td>
-                                                <td>FAMA</td>
-                                                <td>13,976,500</td>
-                                                <td>9,336,346</td>
-                                                <td>64.33%</td>
-                                                <td>1</td>
-                                                <td>W&B</td>
-                                                <td>9,839,151</td>
-                                                <td>4,023,091</td>
-                                                <td>52.44%</td>
-                                                <td>FAMA INV</td>
-                                                <td>22,131,841</td>
-                                                <td>5,683,375</td>
-                                                <td>14.52%</td>
+                                                <td>Wael Mahmoud Bitar</td>
+                                                <td>97,550</td>
+                                                <td>97,550</td>
+                                                <td>108,800</td>
+                                                <td>108,800</td>
+                                                <td>129,633</td>
+                                                <td>145,833</td>
+                                                <td>156,250</td>
+                                                <td>156,250</td>
+                                                <td></td>
+                                                <td>1,000,667</td>
+                                                <td>156,250</td>
+                                                <td>156,250</td>
+                                                <td>156,250</td>
+                                                <td>156,250</td>
+                                                <td>625,000</td>
+                                                <td>1,625,667</td>
+                                                <td>0.00%</td>
                                             </tr>
 
 

@@ -6,6 +6,8 @@
 <!-- Select2 -->
 <link rel="stylesheet" href="../assets/select2/css/select2.min.css">
 <link rel="stylesheet" href="../assets/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="../assets/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- DataTables -->
 <link rel="stylesheet" href="../assets/datatables-bs4/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="../assets/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -76,9 +78,9 @@
                                             <span class="badge badge-warning">Pending</span>
                                         </td> -->
                                         <td>
-                                            <!-- <a href="#" class="btn btn-success btn-sm" title="Approve"><i class="fas fa-file-signature"></i></a> -->
+                                            <a href="view_installments.php" class="btn btn-primary btn-sm" title="View Installments"><i class="fas fa-eye"></i></a>
                                             <a href="agreement_documents.php" class="btn btn-warning btn-sm" title="documents"><i class="fas fa-file"></i></a>
-                                            <a class="btn btn-primary btn-sm" href="view_agreement.php?1" title="View agreement"><i class="fas fa-eye"></i></a>
+                                            <a href="view_agreement.php?1" class="btn btn-primary btn-sm" title="Agreement"><i class="fas fa-handshake"></i></a>
                                             <a class="btn btn-info  btn-sm" data-toggle="modal"
                                                 data-target="#modal-agreement" title="Edit agreement"><i class="fas fa-pencil-alt"></i></a>
                                             <a class="btn btn-danger  btn-sm" onclick="deleteConf()" title="delete"><i class="fas fa-trash"></i></a>
@@ -228,18 +230,16 @@
                                         </div>
                                         <div id="unit-step" class="content" role="tabpanel" aria-labelledby="unit-step-trigger">
                                             <div class="form-group row">
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-3">
                                                     <label class="control-label">Unit Type</label>
                                                     <select class="form-control select2" name="unit_type[]" id="unit_type0">
                                                         <option value="">Unit Type</option>
                                                         <option value="1">1BHK</option>
                                                         <option value="2">2BHK</option>
                                                         <option value="3">3BHK</option>
-                                                        <option value="part">Partition</option>
-                                                        <option value="bs">Bed Space</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-3">
                                                     <label class="control-label">Select Unit No</label>
                                                     <select class="form-control select2" name="unit_type[]" id="unit_type0">
                                                         <option value="">Unit No</option>
@@ -247,7 +247,17 @@
                                                         <option value="2">unit 2</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-3 mt-23">
+                                                    <div class="icheck-success d-inline">
+                                                        <input type="checkbox" id="partition" class="partcheck" value="1">
+                                                        <label class="labelpermission" for="partition"> Partition </label>
+                                                    </div>
+                                                    <div class="icheck-success d-inline">
+                                                        <input type="checkbox" id="bedspace" class="bedcheck" value="1">
+                                                        <label class="labelpermission" for="bedspace"> Bedspace </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
                                                     <label class="control-label">Sub Unit</label>
                                                     <input type="number" name="unit_size[]" class="form-control" placeholder="Sub Unit">
 

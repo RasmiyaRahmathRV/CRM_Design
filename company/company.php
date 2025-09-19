@@ -16,12 +16,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Bank</h1>
+                    <h1>Company</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">Home</a></li>
-                        <li class="breadcrumb-item active">Bank</li>
+                        <li class="breadcrumb-item active">Company</li>
                     </ol>
                 </div>
             </div>
@@ -35,10 +35,10 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <!-- <h3 class="card-title">Bank Details</h3> -->
+                            <!-- <h3 class="card-title">Area Details</h3> -->
                             <span class="float-right">
                                 <button class="btn btn-info float-right m-1" data-toggle="modal"
-                                    data-target="#modal-Bank">Add Bank</button>
+                                    data-target="#modal-company">Add Company</button>
                                 <button class="btn btn-secondary float-right m-1" data-toggle="modal"
                                     data-target="#modal-import">Import</button>
                             </span>
@@ -49,60 +49,27 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Bank Name</th>
-                                        <th>Short Code</th>
+                                        <th>Company Name</th>
+                                        <th>Inductry</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>Website</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Bank 1</td>
-                                        <td>Short 2</td>
+                                        <td>Fama Real Estate</td>
+                                        <td>Real Estate</td>
+                                        <td>Makateb, Deira, Dubai</td>
+                                        <td>509882321</td>
+                                        <td>fama@demo.com</td>
+                                        <td>fama.ae</td>
                                         <td>
                                             <button class="btn btn-info" data-toggle="modal"
-                                                data-target="#modal-Bank">Edit</button>
-                                            <button class="btn btn-danger" onclick="deleteConf()">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Bank 2</td>
-                                        <td>Short 2</td>
-                                        <td>
-                                            <button class="btn btn-info" data-toggle="modal"
-                                                data-target="#modal-Bank">Edit</button>
-                                            <button class="btn btn-danger" onclick="deleteConf()">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Bank 3</td>
-                                        <td>Short 2</td>
-                                        <td>
-                                            <button class="btn btn-info" data-toggle="modal"
-                                                data-target="#modal-Bank">Edit</button>
-                                            <button class="btn btn-danger" onclick="deleteConf()">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Bank 1</td>
-                                        <td>Short 1</td>
-                                        <td>
-                                            <button class="btn btn-info" data-toggle="modal"
-                                                data-target="#modal-Bank">Edit</button>
-                                            <button class="btn btn-danger" onclick="deleteConf()">Delete</button>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Bank</td>
-                                        <td>Short 1</td>
-                                        <td>
-                                            <button class="btn btn-info" data-toggle="modal"
-                                                data-target="#modal-Bank">Edit</button>
+                                                data-target="#modal-company">Edit</button>
                                             <button class="btn btn-danger" onclick="deleteConf()">Delete</button>
                                         </td>
                                     </tr>
@@ -120,30 +87,57 @@
         <!-- /.container-fluid -->
 
 
-        <div class="modal fade" id="modal-Bank">
-            <div class="modal-dialog">
+        <div class="modal fade" id="modal-company">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Bank</h4>
+                        <h4 class="modal-title">Company</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="" id="BankForm">
-                        <input type="hidden" name="id" id="Bank_id">
+                    <form action="" id="areaForm">
+                        <input type="hidden" name="id" id="area_id">
                         <div class="modal-body">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Bank Name</label>
-                                    <input type="text" name="Bank_name" id="Bank_name" class="col-sm-9 form-control"
-                                        id="inputEmail3" placeholder="Bank Name">
+                                    <div class="col-sm-6">
+                                        <label for="inputEmail3" class="col-form-label">Company Name</label>
+                                        <input type="text" name="area_name" id="area_name" class="form-control"
+                                            id="inputEmail3" placeholder="Company Name">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputEmail3" class="col-form-label">Industry</label>
+                                        <input type="text" name="area_name" id="area_name" class="form-control"
+                                            id="inputEmail3" placeholder="Industry">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label for="inputEmail3" class="col-form-label">Website</label>
+                                        <input type="text" name="area_name" id="area_name" class="form-control"
+                                            id="inputEmail3" placeholder="Website">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputEmail3" class="col-form-label">Phone</label>
+                                        <input type="text" name="area_name" id="area_name" class="form-control"
+                                            id="inputEmail3" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label for="inputEmail3" class="col-form-label">Email</label>
+                                        <input type="text" name="area_name" id="area_name" class="form-control"
+                                            id="inputEmail3" placeholder="Email">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputEmail3" class="col-form-label">Address</label>
+                                        <textarea name="" class="form-control" id=""></textarea>
+                                        <!-- <input type="text" name="area_name" id="area_name" class="form-control"
+                                            id="inputEmail3" placeholder="Website"> -->
+                                    </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-3 col-form-label">Short Code</label>
-                                    <input type="text" name="Bank_name" id="Bank_name" class="col-sm-9 form-control"
-                                        id="inputEmail3" placeholder="Short Code">
-                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>
@@ -168,12 +162,12 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="" id="BankImportForm" method="POST" enctype="multipart/form-data">
+                    <form action="" id="areaImportForm" method="POST" enctype="multipart/form-data">
                         <div class="modal-body">
                             <div class="card-body">
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Import excel</label>
-                                    <input type="file" name="file" class="col-sm-9 form-control">
+                                    <input type="file" name="file" class="form-control">
                                 </div>
                             </div>
                             <!-- /.card-body -->

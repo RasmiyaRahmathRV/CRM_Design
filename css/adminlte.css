@@ -52434,6 +52434,10 @@ label:not(.form-check-label):not(.custom-file-label) {
   margin-top: 31px;
 }
 
+.mt-23 {
+  margin-top: 23px;
+}
+
 .searchbtnchq{
    margin-top: 31px;
 }

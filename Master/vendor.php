@@ -181,9 +181,9 @@
                                         <textarea name="" id="" class="form-control"></textarea>
                                     </div>
                                     <div class="col-sm-3">
-                                        <label for="inputEmail3" class="col-form-label">Accountant</label>
+                                        <label for="inputEmail3" class="col-form-label">Accountant Name</label>
                                         <input type="text" name="Vendor_name" id="Vendor_name" class="form-control"
-                                            id="inputEmail3" placeholder="Contact phone">
+                                            id="inputEmail3" placeholder="Accountant name">
                                     </div>
                                     <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Accountant phone</label>
@@ -206,7 +206,7 @@
                                     <div class="col-sm-4">
                                         <label for="inputEmail3" class="col-form-label">Contact email</label>
                                         <input type="text" name="Vendor_name" id="Vendor_name" class="form-control"
-                                            id="inputEmail3" placeholder="Vendor Contact person">
+                                            id="inputEmail3" placeholder="Vendor Contact Email">
                                     </div>
                                 </div>
 

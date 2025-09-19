@@ -50,26 +50,36 @@
                                 <form class="form-horizontal">
                                     <div class="form-group row m-4">
                                         <div class="col-md-3">
-                                            <label for="exampleInputEmail1">From</label>
-                                            <div class="input-group date" id="dateFrom" data-target-input="nearest">
-                                                <input type="text" class="form-control datetimepicker-input" data-target="#dateFrom" placeholder="dd-mm-YYYY" />
-                                                <div class="input-group-append" data-target="#dateFrom" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div>
+                                            <label for="inputPassword3">Year From</label>
+                                            <select class="form-control select2" name="area_id">
+                                                <option value="">Select Year</option>
+                                                <option value="1">2022</option>
+                                                <option value="1">2023</option>
+                                                <option value="1">2024</option>
+                                                <option value="1">2025</option>
+                                            </select>
                                         </div>
                                         <div class="col-md-3">
-                                            <label for="exampleInputEmail1">To</label>
-                                            <div class="input-group date" id="dateTo" data-target-input="nearest">
-                                                <input type="text" class="form-control datetimepicker-input" data-target="#dateTo" placeholder="dd-mm-YYYY" />
-                                                <div class="input-group-append" data-target="#dateTo" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div>
+                                            <label for="inputPassword3">Year To</label>
+                                            <select class="form-control select2" name="area_id">
+                                                <option value="">Select Year</option>
+                                                <option value="1">2022</option>
+                                                <option value="1">2023</option>
+                                                <option value="1">2024</option>
+                                                <option value="1">2025</option>
+                                            </select>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-1 float-right mb-2">
+                                        <div class="col-md-3">
+                                            <label for="inputPassword3">Investor Name</label>
+                                            <select class="form-control select2" name="area_id">
+                                                <option value="">Select Investor Name</option>
+                                                <option value="1">Wael Mahmoud Bitar</option>
+                                                <option value="1">Adam Muneer Mohammad Al Ramahi</option>
+                                            </select>
+                                        </div>
+                                        <!-- </div>
+                                    <div class="form-group"> -->
+                                        <div class="col-md-1 float-right mt-31">
                                             <button type="button" class="btn btn-info">Search</button>
                                         </div>
                                     </div>

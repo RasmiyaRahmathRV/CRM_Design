@@ -111,13 +111,13 @@
                                                 <td>3079</td>
                                                 <td>58.45%</td>
                                                 <td>8</td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>2</td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>4</td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
@@ -128,13 +128,13 @@
                                                 <td> 1099</td>
                                                 <td> 20.86%</td>
                                                 <td>2</td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>1</td>
+                                                <td>4</td>
                                             </tr>
                                         </tbody>
 

@@ -130,7 +130,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Instalment</label>
                                     <input type="text" name="Instalment_name" id="Instalment_name" class="col-sm-9 form-control"
-                                        id="inputEmail3" placeholder="Instalment">
+                                        id="inputEmail3" placeholder="Installment">
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-3 col-form-label">Interval</label>

@@ -356,6 +356,11 @@
                                                         <input type="checkbox" id="btob" class="btobcheck" value="1">
                                                         <label class="labelpermission" for="btob"> B2B </label>
                                                     </div>
+
+                                                    <div class="icheck-success d-inline">
+                                                        <input type="checkbox" id="btoc" class="btoccheck" value="1">
+                                                        <label class="labelpermission" for="btoc"> B2C </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="normalBuilding">
@@ -1038,5 +1043,18 @@
 
 
         container.querySelectorAll('.add-more-fullBuilding').forEach(attachEvents);
+    });
+</script>
+
+<script>
+    const btob = document.getElementById("btob");
+    const btoc = document.getElementById("btoc");
+
+    btob.addEventListener("change", () => {
+        if (btob.checked) btoc.checked = false;
+    });
+
+    btoc.addEventListener("change", () => {
+        if (btoc.checked) btob.checked = false;
     });
 </script>

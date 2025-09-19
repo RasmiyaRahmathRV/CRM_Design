@@ -9,12 +9,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Contract details</h1>
+                    <h1>Installment details</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Contract details</li>
+                        <li class="breadcrumb-item active">Installment details</li>
                     </ol>
                 </div>
             </div>
@@ -48,19 +48,19 @@
                                     <span class="mobile">056-8856995</span></br>
                                     <span class="email">ADIL@FAATEH.AE</span></br>
                                     <span class="locality">AL BARSHA</span>, <span class="building">ADIYAT BUILDING - 1001</span></br>
-                                    <span class="start_date">01/08/2025</span> - <span class="end_date">31/07/2026</span></br>
-                                    <span class="unit_type">1BR</span> - <span class="inst_mode">4 / CHEQUE</span></br>
+
                                 </address>
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-6 float-right">
-                                <span class="float-right"><strong>Recievable Details</strong>
+                                <span class="float-right"><strong>Tenant Details</strong>
                                     <address>
-                                        Rent PA - 120,000.00<br>
-                                        Commission - 5,000.00<br>
-                                        Refundable Deposit - 5,000.00<br>
-                                        Total Receivable - 130,000.00<br>
-                                        <b>Payment Due:</b> 2/22/2014
+                                        <span class="vendor_name">John</span></br>
+                                        <span class="mobile">056-8856995</span></br>
+                                        <span class="email">tenant@demo.AE</span></br>
+                                        <span class="locality">AL BARSHA</span>, <span class="building"> BUILDING - 1001</span></br>
+                                        <span class="start_date">01/08/2025</span> - <span class="end_date">31/07/2026</span></br>
+                                        <span class="unit_type">1BR</span> - <span class="inst_mode">12 / Bank</span></br>
                                     </address>
                                 </span>
                             </div>
@@ -74,7 +74,7 @@
                                     <thead>
                                         <tr>
                                             <th>Date</th>
-                                            <th>Chq No. / Bank</th>
+                                            <th>Bank Transfer</th>
                                             <th>Amount</th>
                                             <th>Favouring</th>
                                             <th>Composition</th>
@@ -85,51 +85,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>01/08/2025</td>
-                                            <td>1234</td>
-                                            <td>40000.00</td>
-                                            <td>ABDULLA MOHAMMED ALMARRI</td>
-                                            <td>RENT 1/4</td>
-                                            <td><a class="btn btn-info  btn-sm" href="#" data-toggle="modal" data-target="#installment-edit"><i class="fas fa-pencil-alt"></i></a></td>
-                                            <td><a class="btn btn-danger  btn-sm" onclick="deleteConf()"><i class="fas fa-trash"></i></a></td>
-                                            <td><a class="btn btn-warning  btn-sm"><i class="far fa-clone"></i></a></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <tr>
-                                            <td>01/08/2025</td>
-                                            <td>1235</td>
-                                            <td>40000.00</td>
-                                            <td>ABDULLA MOHAMMED ALMARRI</td>
-                                            <td>RENT 2/4</td>
-                                            <td><a class="btn btn-info  btn-sm" href="#" data-toggle="modal" data-target="#installment-edit"><i class="fas fa-pencil-alt"></i></a></td>
-                                            <td><a class="btn btn-danger  btn-sm" onclick="deleteConf()"><i class="fas fa-trash"></i></a></td>
-                                            <td><a class="btn btn-warning  btn-sm"><i class="far fa-clone"></i></a></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <tr>
-                                            <td>01/08/2025</td>
-                                            <td>1236</td>
-                                            <td>40000.00</td>
-                                            <td>ABDULLA MOHAMMED ALMARRI</td>
-                                            <td>RENT 3/4</td>
-                                            <td><a class="btn btn-info  btn-sm" href="#" data-toggle="modal" data-target="#installment-edit"><i class="fas fa-pencil-alt"></i></a></td>
-                                            <td><a class="btn btn-danger  btn-sm" onclick="deleteConf()"><i class="fas fa-trash"></i></a></td>
-                                            <td><a class="btn btn-warning  btn-sm"><i class="far fa-clone"></i></a></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-                                        <tr>
-                                            <td>01/08/2025</td>
-                                            <td>1237</td>
-                                            <td>40000.00</td>
-                                            <td>ABDULLA MOHAMMED ALMARRI</td>
-                                            <td>RENT 4/4</td>
-                                            <td><a class="btn btn-info  btn-sm" href="#"><i class="fas fa-pencil-alt"></i></a></td>
-                                            <td><a class="btn btn-danger  btn-sm" onclick="deleteConf()"><i class="fas fa-trash"></i></a></td>
-                                            <td><a class="btn btn-warning  btn-sm"><i class="far fa-clone"></i></a></td>
-                                            <!-- <td></td> -->
-                                        </tr>
-
+                                        <?php for ($i = 1; $i < 13; $i++) { ?>
+                                            <tr>
+                                                <td><?= $i ?>/08/2025</td>
+                                                <td>ADCB - <?= $i ?>234</td>
+                                                <td>40000.00</td>
+                                                <td>Fama real Estate</td>
+                                                <td>RENT <?= $i ?>/12</td>
+                                                <td><a class="btn btn-info  btn-sm" href="#" data-toggle="modal" data-target="#installment-edit"><i class="fas fa-pencil-alt"></i></a></td>
+                                                <td><a class="btn btn-danger  btn-sm" onclick="deleteConf()"><i class="fas fa-trash"></i></a></td>
+                                                <td><a class="btn btn-warning  btn-sm"><i class="far fa-clone"></i></a></td>
+                                                <!-- <td></td> -->
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -152,7 +120,7 @@
                         <!-- this row will not appear when printing -->
                         <div class="row no-print">
                             <div class="col-12">
-                                <a href="contract.php" class="btn btn-default">Back</a>
+                                <a href="agreement.php" class="btn btn-default">Back</a>
                                 <!-- <a href="Contract details-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a> -->
                                 <?php if (isset($_GET['1'])) { ?>
 

@@ -93,14 +93,25 @@
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Passport</td>
+                                                    <td>Emirates ID</td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
+                                                    <td>Passport</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Visa</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
                                                     <td>Agreement</td>
                                                     <td></td>
                                                 </tr>
+
                                             </table>
                                         </div>
                                     </div>
@@ -123,11 +134,21 @@
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Passport</td>
+                                                    <td>Emirates ID</td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
+                                                    <td>Passport</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Visa</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
                                                     <td>Agreement</td>
                                                     <td></td>
                                                 </tr>
@@ -154,11 +175,21 @@
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Passport</td>
+                                                    <td>Emirates ID</td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
+                                                    <td>Passport</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Visa</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
                                                     <td>Agreement</td>
                                                     <td></td>
                                                 </tr>

@@ -55,21 +55,6 @@
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <!-- Message Start -->
-                            <div class="media">
-                                <img src="../img/user3-128x128.jpg" alt="User Avatar"
-                                    class="img-size-50 img-circle mr-3">
-                                <div class="media-body">
-                                    <h3 class="dropdown-item-title">
-                                        Nora Silvester
-                                        <span class="float-right text-sm text-warning"><i
-                                                class="fas fa-star"></i></span>
-                                    </h3>
-                                    <p class="text-sm">The subject goes here</p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                                </div>
-                            </div>
-                            <!-- Message End -->
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
@@ -323,6 +308,15 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="../company/company.php" class="nav-link">
+                                <i class="nav-icon fas fa-building"></i>
+                                <p>
+                                    Company
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
@@ -335,6 +329,19 @@
                                     <a href="../reports/project_acquisition.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Project Acquisition</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="../reports/roi.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>ROI</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../reports/renewal_rental.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Renewal</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -384,18 +391,6 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../reports/roi.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>ROI</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../reports/renewal_rental.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Renewal</p>
-                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
